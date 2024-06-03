@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row; /* Stack items vertically on smaller screens */
+  
+  width: 100%; /* Full screen width */
+  height: 100vh; /* Full viewport height */
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  text-align: center;
+  padding: 20px;
+}
+
+#text-div {
+  width: 90%;
+  height: auto; /* Auto height based on content */
+  /* border: 2px solid black; */
+}
+
+#text-div h1 {
+  font-size: 2.5em; /* Adjust font size for better readability */
+  color: #002147;
+  margin-bottom: 10px;
+}
+
+#text-div p {
+  font-size: 1em; /* Adjust font size for better readability */
+  color: #36454F;
+}
+
+#img-div {
+  width: 70%;
+  /* border: 2px solid rebeccapurple; */
+  height: auto; /* Auto height based on content */
+  margin-top: 20px;
+}
+
+#img-div img {
+  width: 100%; /* Image takes the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    padding: 10px;
+  }
+
+  #text-div {
+    width: 90%;
+  }
+
+  #img-div {
+    width: 60%;
+  }
+
+  #text-div h1 {
+    font-size: 2em;
+  }
+
+  #text-div p {
+    font-size: 1em;
+  }
+  #text-div h1, #text-div p {
+    color: #ffffff; /* Changing text color to be readable against dark background */
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 5px;
+  }
+
+  #text-div {
+    width: 100%;
+  }
+
+  #img-div {
+    width: 80%;
+  }
+
+  #text-div h1 {
+    font-size: 1.8em;
+  }
+
+  #text-div p {
+    font-size: 0.9em;
+  }
+  #text-div h1, #text-div p {
+    color: #ffffff; /* Changing text color to be readable against dark background */
+  }
+}
+
+@media (max-width: 300px) {
+  body, html {
+    background-color: #002147;
+  }
+
+  .main {
+    padding: 5px;
+  }
+
+  #text-div {
+    width: 100%;
+  }
+
+  #img-div {
+    width: 90%;
+  }
+
+  #text-div h1, #text-div p {
+    color: #ffffff; /* Changing text color to be readable against dark background */
+  }
+
+  #text-div h1 {
+    font-size: 1.5em;
+  }
+
+  #text-div p {
+    font-size: 0.8em;
+  }
+}
